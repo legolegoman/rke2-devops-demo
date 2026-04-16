@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: ghcr.io/<your-username>/<your-repo>/demo-app:latest
+        image: harbor.chunha.ddns.net:9443/private/demo-app:latest
         ports:
         - containerPort: 3000
       imagePullSecrets:
-      - name: ghcr-creds
+      - name: harbor-private

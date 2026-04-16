@@ -17,7 +17,7 @@ jobs:
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
+          registry: harbor.chunha.ddns.net:9443
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
