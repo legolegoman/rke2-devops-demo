@@ -24,7 +24,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./app          # Tell Docker to look inside the app folder
-          file: ./app/Dockerfile  # Specify the path to the Dockerfile
+          context: .              # Look at the whole repo
+          file: ./Dockerfile      # Use the Dockerfile in the root
           push: true
           tags: harbor.chunha.ddns.net:9443/${{ github.repository }}/demo-app:latest
