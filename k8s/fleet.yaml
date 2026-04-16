@@ -1,0 +1,10 @@
+defaultNamespace: default
+labels:
+  app: demo-app
+
+# This section ensures the app is deployed to the right cluster
+targetCustomizations:
+- name: production
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/type: devops # 'local' is the default for RKE2/Rancher
